@@ -14,8 +14,8 @@ if(functionSelect == "t"){
 }
 
 function calculator(){
-    var value1 = parseInt(prompt('enter first value'));
-    var value2 = parseInt(prompt('enter the second value'));
+    var value1 = parseFloat(prompt('enter first value'));
+    var value2 = parseFloat(prompt('enter the second value'));
     var calculatorChoice = prompt('Which type of calculator: (b)asic or (a)dvanced');
 
     if(calculatorChoice == 'b'){
@@ -84,33 +84,36 @@ function bmi(){
     var bmiChoice = prompt("(m)etric or (i)mperial");
 
     if(bmiChoice == "m"){
-        var weight = parseInt(prompt("Enter your weight in KG"));
-        var height = parseInt(prompt("Enter your height in Meters"));
+        var weight = parseFloat(prompt("Enter your weight in KG"));
+        var height = parseFloat(prompt("Enter your height in Meters"));
         metric(weight, height);
     }
 
     if(bmiChoice == "i"){
-        var weight = parseInt(prompt("Enter your weight in Pounds"));
-        var height = parseInt(prompt("Enter your height in Inches"));
+        var weight = parseFloat(prompt("Enter your weight in Pounds"));
+        var height = parseFloat(prompt("Enter your height in Inches"));
         imperial(weight, height);
     }
 
     function metric(w, h){
-        var bmi = parseInt(w / (h*h));
+        var bmi = parseFloat(w / (h*h));
         console.log("Metric BMI = " + bmi);
     }
 
     function imperial(w, h){
-        var bmi = parseInt((w/(h*h)) * 703);
+        var bmi = parseFloat((w/(h*h)) * 703);
         console.log("Imperial BMI = " + bmi);
     }
 }
 
 function trip(){
-    var distance = parseInt(prompt("Enter the distance"));
-    var efficiency = parseInt(prompt("Enter fuel efficiency"));
-    var cost = parseInt(prompt("Enter the cost per gallon"));
-    var speed = parseInt(prompt("Enter the speed"));
+    var distance = parseFloat(prompt("Enter the distance"));
+    var efficiency = parseFloat(prompt("Enter fuel efficiency"));
+    var costPerGallon = parseFloat(prompt("Enter the cost per gallon"));
+    var speed = parseFloat(prompt("Enter the speed"));
+
+    var time = distance / speed;
+
 }
 
 
