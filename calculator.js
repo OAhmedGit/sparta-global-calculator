@@ -9,6 +9,7 @@ if(functionSelect == "b"){
     bmi();
 }
 
+var result;
 
 function calculator(){
     var value1 = parseFloat(prompt('enter first value'));
@@ -26,24 +27,37 @@ function calculator(){
     }
 
     function basic(num1, num2, userOp){
+        
         switch(userOp){
             case "a":
                 console.log(num1 + num2);
+                result = num1 + num2;
+                alert(num1 + " + " + num2 + " = " + result);
                 break;
             case "s":
                 console.log(num1 - num2);
+                result = num1 - num2;
+                alert(num1 + " - " + num2 + " = " + result);
                 break;
             case "m":
                 console.log(num1 * num2);
+                result = num1 * num2;
+                alert(num1 + " x " + num2 + " = " + result);
                 break;
             case "d":
                 console.log(num1 / num2);
+                result = num1 / num2;
+                alert(num1 + " / " + num2 + " = " + result);
                 break;
             case "mo":
                 console.log(num1 % num2);
+                result = num1 % num2;
+                alert(num1 + " % " + num2 + " = " + result);
                 break;
             default:
                 console.log(num1 + num2);
+                result = num1 + num2;
+                alert(num1 + " + " + num2 + " = " + result);
         }
     }
 
@@ -51,25 +65,38 @@ function calculator(){
         switch(userOp){
             case "a":
                 console.log(num1 + num2);
+                result = num1 + num2;
+                alert(num1 + " + " + num2 + " = " + result);
                 break;
             case "s":
                 console.log(num1 - num2);
+                result = num1 - num2;
+                alert(num1 + " - " + num2 + " = " + result);
                 break;
             case "m":
                 console.log(num1 * num2);
+                result = num1 * num2;
+                alert(num1 + " x " + num2 + " = " + result);
                 break;
             case "d":
                 console.log(num1 / num2);
+                result = num1 / num2;
+                alert(num1 + " / " + num2 + " = " + result);
                 break;
             case "mo":
                 console.log(num1 % num2);
+                result = num1 % num2;
+                alert(num1 + " % " + num2 + " = " + result);
                 break;
             case "p":
                 console.log(Math.pow(num1, num2));
+                result = Math.pow(num1, num2);
+                alert(num1 + " ^ " + num2 + " = " + result);
                 break;
             case "sq":
                 console.log(Math.sqrt(num1));
                 console.log(Math.sqrt(num2));
+                alert("sqrt of " + num1 + " = " + Math.sqrt(num1) + "\n" + "sqrt of " + num2 + " = " + Math.sqrt(num2));
                 break;
             default:
                 console.log(num1 + num2);
@@ -95,11 +122,13 @@ function bmi(){
     function metric(w, h){
         var bmi = parseFloat(w / (h*h));
         console.log("Metric BMI = " + bmi);
+        alert("Metric BMI = " + bmi);
     }
 
     function imperial(w, h){
         var bmi = parseFloat((w/(h*h)) * 703);
         console.log("Imperial BMI = " + bmi);
+        alert("Imperial BMI = " + bmi);
     }
 }
 
