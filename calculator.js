@@ -1,5 +1,5 @@
 // get the user inputs
-var functionSelect = prompt('Which feature would you like to use (c)alculator, (b)mi calculator, (t)rip calculator')
+var functionSelect = prompt('Which feature would you like to use (c)alculator, (b)mi calculator')
 
 if(functionSelect == "c"){
     calculator();
@@ -9,13 +9,11 @@ if(functionSelect == "b"){
     bmi();
 }
 
-if(functionSelect == "t"){
-    trip();
-}
+var result;
 
 function calculator(){
-    var value1 = parseInt(prompt('enter first value'));
-    var value2 = parseInt(prompt('enter the second value'));
+    var value1 = parseFloat(prompt('enter first value'));
+    var value2 = parseFloat(prompt('enter the second value'));
     var calculatorChoice = prompt('Which type of calculator: (b)asic or (a)dvanced');
 
     if(calculatorChoice == 'b'){
@@ -29,24 +27,37 @@ function calculator(){
     }
 
     function basic(num1, num2, userOp){
+        
         switch(userOp){
             case "a":
                 console.log(num1 + num2);
+                result = num1 + num2;
+                alert(num1 + " + " + num2 + " = " + result);
                 break;
             case "s":
                 console.log(num1 - num2);
+                result = num1 - num2;
+                alert(num1 + " - " + num2 + " = " + result);
                 break;
             case "m":
                 console.log(num1 * num2);
+                result = num1 * num2;
+                alert(num1 + " x " + num2 + " = " + result);
                 break;
             case "d":
                 console.log(num1 / num2);
+                result = num1 / num2;
+                alert(num1 + " / " + num2 + " = " + result);
                 break;
             case "mo":
                 console.log(num1 % num2);
+                result = num1 % num2;
+                alert(num1 + " % " + num2 + " = " + result);
                 break;
             default:
                 console.log(num1 + num2);
+                result = num1 + num2;
+                alert(num1 + " + " + num2 + " = " + result);
         }
     }
 
@@ -54,25 +65,38 @@ function calculator(){
         switch(userOp){
             case "a":
                 console.log(num1 + num2);
+                result = num1 + num2;
+                alert(num1 + " + " + num2 + " = " + result);
                 break;
             case "s":
                 console.log(num1 - num2);
+                result = num1 - num2;
+                alert(num1 + " - " + num2 + " = " + result);
                 break;
             case "m":
                 console.log(num1 * num2);
+                result = num1 * num2;
+                alert(num1 + " x " + num2 + " = " + result);
                 break;
             case "d":
                 console.log(num1 / num2);
+                result = num1 / num2;
+                alert(num1 + " / " + num2 + " = " + result);
                 break;
             case "mo":
                 console.log(num1 % num2);
+                result = num1 % num2;
+                alert(num1 + " % " + num2 + " = " + result);
                 break;
             case "p":
                 console.log(Math.pow(num1, num2));
+                result = Math.pow(num1, num2);
+                alert(num1 + " ^ " + num2 + " = " + result);
                 break;
             case "sq":
                 console.log(Math.sqrt(num1));
                 console.log(Math.sqrt(num2));
+                alert("sqrt of " + num1 + " = " + Math.sqrt(num1) + "\n" + "sqrt of " + num2 + " = " + Math.sqrt(num2));
                 break;
             default:
                 console.log(num1 + num2);
@@ -84,34 +108,30 @@ function bmi(){
     var bmiChoice = prompt("(m)etric or (i)mperial");
 
     if(bmiChoice == "m"){
-        var weight = parseInt(prompt("Enter your weight in KG"));
-        var height = parseInt(prompt("Enter your height in Meters"));
+        var weight = parseFloat(prompt("Enter your weight in KG"));
+        var height = parseFloat(prompt("Enter your height in Meters"));
         metric(weight, height);
     }
 
     if(bmiChoice == "i"){
-        var weight = parseInt(prompt("Enter your weight in Pounds"));
-        var height = parseInt(prompt("Enter your height in Inches"));
+        var weight = parseFloat(prompt("Enter your weight in Pounds"));
+        var height = parseFloat(prompt("Enter your height in Inches"));
         imperial(weight, height);
     }
 
     function metric(w, h){
-        var bmi = parseInt(w / (h*h));
+        var bmi = parseFloat(w / (h*h));
         console.log("Metric BMI = " + bmi);
+        alert("Metric BMI = " + bmi);
     }
 
     function imperial(w, h){
-        var bmi = parseInt((w/(h*h)) * 703);
+        var bmi = parseFloat((w/(h*h)) * 703);
         console.log("Imperial BMI = " + bmi);
+        alert("Imperial BMI = " + bmi);
     }
 }
 
-function trip(){
-    var distance = parseInt(prompt("Enter the distance"));
-    var efficiency = parseInt(prompt("Enter fuel efficiency"));
-    var cost = parseInt(prompt("Enter the cost per gallon"));
-    var speed = parseInt(prompt("Enter the speed"));
-}
 
 
 
