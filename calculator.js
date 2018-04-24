@@ -1,5 +1,5 @@
 // get the user inputs
-var functionSelect = prompt('Which feature would you like to use (c)alculator, (b)mi calculator, (t)rip calculator')
+var functionSelect = prompt('Which feature would you like to use (c)alculator, (b)mi calculator')
 
 if(functionSelect == "c"){
     calculator();
@@ -9,9 +9,6 @@ if(functionSelect == "b"){
     bmi();
 }
 
-if(functionSelect == "t"){
-    trip();
-}
 
 function calculator(){
     var value1 = parseFloat(prompt('enter first value'));
@@ -106,15 +103,6 @@ function bmi(){
     }
 }
 
-function trip(){
-    var distance = parseFloat(prompt("Enter the distance"));
-    var efficiency = parseFloat(prompt("Enter fuel efficiency"));
-    var costPerGallon = parseFloat(prompt("Enter the cost per gallon"));
-    var speed = parseFloat(prompt("Enter the speed"));
-
-    var time = distance / speed;
-
-}
 
 
 
